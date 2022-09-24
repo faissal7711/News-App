@@ -79,10 +79,10 @@ Widget buildArticleItem(article,context) {
   );
 }
 
-Widget articleBuilder(list,ctx) => ConditionalBuilder(
+Widget articleBuilder(List<dynamic> list,ctx) => ConditionalBuilder(
       condition: list.isNotEmpty,
       builder: (context) => ListView.separated(
-        itemCount: 15,
+        itemCount: list.length,
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) => buildArticleItem(list[index],ctx),
         separatorBuilder: (context, index) => Padding(
