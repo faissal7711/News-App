@@ -23,12 +23,7 @@ class NewsLayout extends StatelessWidget {
             actions: [
               IconButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SearchScreen(),
-                    ),
-                  );
+                  navigateTo(context, SearchScreen());
                 },
                 icon: Icon(
                   Icons.search,

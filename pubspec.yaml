@@ -40,6 +40,7 @@ dependencies:
   flutter_bloc: ^8.0.1
   conditional_builder_null_safety: ^0.0.6
   shared_preferences: ^2.0.15
+  webview_flutter: ^3.0.4
 #  bottom_navy_bar: ^6.0.0
 
 dev_dependencies:
