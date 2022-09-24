@@ -2,14 +2,14 @@ import 'package:conditional_builder_null_safety/conditional_builder_null_safety.
 import 'package:flutter/material.dart';
 import 'package:flutter_application_11/modules/web_view/web_view_screen.dart';
 
-void navigateTo(context,widget)=>Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => widget,
-  ),
-);
+void navigateTo(context, widget) => Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => widget,
+      ),
+    );
 
-Widget buildArticleItem(article,context) {
+Widget buildArticleItem(article, context) {
   return InkWell(
     onTap: () {
       navigateTo(context, WebViewScreen(url: article['url']));
@@ -79,18 +79,21 @@ Widget buildArticleItem(article,context) {
   );
 }
 
-Widget articleBuilder(List<dynamic> list,ctx) => ConditionalBuilder(
+Widget articleBuilder(List<dynamic> list, ctx, {isSearch = false}) =>
+    ConditionalBuilder(
       condition: list.isNotEmpty,
       builder: (context) => ListView.separated(
         itemCount: list.length,
         physics: const BouncingScrollPhysics(),
-        itemBuilder: (context, index) => buildArticleItem(list[index],ctx),
+        itemBuilder: (context, index) => buildArticleItem(list[index], ctx),
         separatorBuilder: (context, index) => Padding(
           padding: const EdgeInsets.all(8.0),
           child: Divider(color: Colors.blueGrey.shade300),
         ),
       ),
-      fallback: (context) => const Center(
-        child: CircularProgressIndicator(),
-      ),
+      fallback: (context) => isSearch
+          ? Container()
+          : const Center(
+              child: CircularProgressIndicator(),
+            ),
     );

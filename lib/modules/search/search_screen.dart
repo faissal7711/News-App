@@ -28,7 +28,7 @@ class SearchScreen extends StatelessWidget {
                 child: TextFormField(
                   keyboardType: TextInputType.text,
                   controller: txtControler,
-                  onChanged: (val){
+                  onChanged: (val) {
                     NewsCubit.get(context).getSearch(val);
                   },
                   validator: (value) {
@@ -60,7 +60,7 @@ class SearchScreen extends StatelessWidget {
                   // onSaved: onClick(),
                 ),
               ),
-              Expanded(child: articleBuilder(list, context)),
+              Expanded(child: articleBuilder(list, context, isSearch: true)),
             ],
           ),
         );
