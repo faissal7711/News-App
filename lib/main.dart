@@ -86,21 +86,21 @@ class MyApp extends StatelessWidget {
                 ),
                 elevation: 0.0,
               ),
-              textTheme: TextTheme(
+              textTheme: const TextTheme(
                 bodyText2: TextStyle(
                   fontSize: 20.0,
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              primaryTextTheme: TextTheme(
+              primaryTextTheme: const TextTheme(
                 bodyText2: TextStyle(
                   fontSize: 20.0,
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              bottomNavigationBarTheme: const BottomNavigationBarThemeData(
                 selectedItemColor: Colors.deepOrange,
                 elevation: 20,
                 unselectedItemColor: Colors.grey,
@@ -108,19 +108,19 @@ class MyApp extends StatelessWidget {
                 type: BottomNavigationBarType.fixed,
               ),
               primarySwatch: Colors.deepOrange,
-              floatingActionButtonTheme: FloatingActionButtonThemeData(
+              floatingActionButtonTheme: const FloatingActionButtonThemeData(
                 backgroundColor: Colors.deepOrange,
               ),
             ),
             darkTheme: ThemeData(
-              primaryTextTheme: TextTheme(
+              primaryTextTheme: const TextTheme(
                 bodyText2: TextStyle(
                   fontSize: 20.0,
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              scaffoldBackgroundColor: Color(0xFF333739),
+              scaffoldBackgroundColor: const Color(0xFF333739),
               appBarTheme: const AppBarTheme(
                 backgroundColor: Color(0xFF333739),
                 textTheme: TextTheme(
@@ -143,14 +143,14 @@ class MyApp extends StatelessWidget {
                 ),
                 elevation: 0.0,
               ),
-              textTheme: TextTheme(
+              textTheme: const TextTheme(
                 bodyText2: TextStyle(
                   fontSize: 20.0,
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              bottomNavigationBarTheme: const BottomNavigationBarThemeData(
                 selectedItemColor: Colors.deepOrange,
                 elevation: 20,
                 unselectedItemColor: Colors.grey,
@@ -158,7 +158,7 @@ class MyApp extends StatelessWidget {
                 type: BottomNavigationBarType.fixed,
               ),
               primarySwatch: Colors.deepOrange,
-              floatingActionButtonTheme: FloatingActionButtonThemeData(
+              floatingActionButtonTheme: const FloatingActionButtonThemeData(
                 backgroundColor: Colors.deepOrange,
               ),
             ),
